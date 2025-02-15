@@ -2,9 +2,11 @@
 require 'functions.php';
 require 'database.php';
 
-$db = new Database();
-$posts = $db->query("SELECT * FROM posts")->fetchAll(PDO::FETCH_ASSOC);
-$post = $db->query("SELECT * FROM posts where id = 1")->fetch(PDO::FETCH_ASSOC);
+
+$config = require 'config.php';
+$db = new Database($config['database']);
+$posts = $db->query("SELECT * FROM posts")->fetchAll();
+$post = $db->query("SELECT * FROM posts where id = 1")->fetch();
 
 // If collection then use loop
 foreach ($posts as $post) {
