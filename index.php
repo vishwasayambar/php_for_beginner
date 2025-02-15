@@ -1,7 +1,3 @@
 <?php
-
-require __DIR__ . '/functions.php';
-
-$heading = 'Home';
-
-require __DIR__ . '/views/index.view.php';
+require 'functions.php';
+require 'routes.php'; // Created Dedicated route file
