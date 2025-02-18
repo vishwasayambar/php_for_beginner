@@ -1,0 +1,23 @@
+{
+    "name": "vishwa/dynamic-file-driver",
+    "description": "An automatic file storage driver for seamless file management.",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "src\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Vishwa",
+            "email": "vishwajitsayambar92@gmail.com"
+        }
+    ],
+    "require": {
+        "aws/aws-sdk-php": "^3.339",
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
