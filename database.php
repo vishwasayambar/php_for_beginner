@@ -21,11 +21,11 @@ class Database
         ]);
     }
 
-    public function query($query)
+    public function query($query, $parameters = [])
     {
 
         $statement = $this->connection->prepare($query);
-        $statement->execute();
+        $statement->execute($parameters);// to Avoid SQL injection we are sending param and using in query inline
 
         // now here we have used fetchALl method which return collection event though we fetch one record like so we can use direct only fetch
 //        But sometimes we need collection also so in for both cases that fetch should be dynamic so return only $statement
